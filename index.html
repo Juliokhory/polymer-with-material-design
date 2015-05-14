@@ -105,6 +105,59 @@
 		<a name="paper-dropdown-menu"></a> 
 			<h1>paper-dropdown-menu</h1>
 			<div class="contens-elements">
+				<polymer-element name="x-trigger" extends="paper-icon-button" relative on-tap="{{toggle}}" noink>
+				  	<template>
+					    <shadow></shadow>
+					    <content></content>
+				  	</template>
+				  	<script>
+					    Polymer({
+					      toggle: function() {
+					        if (!this.dropdown) {
+					          this.dropdown = this.querySelector('paper-dropdown');
+					        }
+					        this.dropdown && this.dropdown.toggle();
+					      }
+					    });
+				  	</script>
+				</polymer-element>
+				<template is="auto-binding">
+					<x-trigger icon="menu">
+					    <paper-dropdown>
+						    Alineación:
+						    <br>
+						    Izquierda , Top
+					    </paper-dropdown>
+					</x-trigger>
+
+					<x-trigger icon="menu">
+					    <paper-dropdown valign="bottom">
+						    Alineación:
+						    <br>
+						    Izquierda , Bot
+					    </paper-dropdown>
+					</x-trigger>
+
+					<x-trigger icon="menu">
+					    <paper-dropdown halign="right">
+					        Alineación:
+						    <br>
+						    Derecha , Top
+						</paper-dropdown>
+					</x-trigger>
+
+					<x-trigger icon="menu">
+					    <paper-dropdown class="no-padding">
+					       <div class="menu">
+						        <paper-item>Opcion 1</paper-item>
+						        <paper-item>Opcion 2</paper-item>
+						        <paper-item>Opcion 3</paper-item>
+						        <paper-item>Opcion 4</paper-item>
+						        <paper-item>Opcion 5</paper-item>
+						    </div>
+						</paper-dropdown>
+				    </x-trigger>
+				</template>
 			</div>
 
 		<a name="paper-fab"></a>

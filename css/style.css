@@ -30,7 +30,14 @@
 
 		    paper-checkbox{
 		    	padding: 0px 10px;
-			}
+			}	
+			x-trigger {
+		    	z-index: auto;
+		    }
+		    html /deep/ paper-dropdown:not(.no-padding)::shadow #scroller {
+		    	box-sizing: border-box;
+			    padding: 8px;
+		    }
 
 
 	
