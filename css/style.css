@@ -10,15 +10,6 @@
 				min-height: 100%;
 			}
 
-			html /deep/ paper-dialog {
-				color: green;
-			}
-
-			html /deep/ paper-dialog::shadow #scroller {
-			    height: 300px;
-			    width: 300px;
-			}
-
 			core-toolbar {
 		    	background-color: #00bcd4;
 		      	color: #fff;
@@ -41,8 +32,5 @@
 		    	padding: 0px 10px;
 			}
 
-			paper-dropdown::shadow #ripple,
-			paper-dropdown::shadow #background {
-    			background-color: green;
-			}
+
 	

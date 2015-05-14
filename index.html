@@ -6,7 +6,7 @@
 		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<link rel="import" href="bower_components/core-elements/core-elements.html">
 		<link rel="import" href="bower_components/paper-elements/paper-elements.html">
-		<link rel="import" href="bower_components/paper-dialog/paper-dialog-transition.html">
+		<link rel="import" href="bower_components/paper-dialog/paper-action-dialog.html">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
@@ -63,11 +63,42 @@
 		<a name="paper-dialog"></a>
 			<h1>paper-dialog</h1>
 			<div class="contens-elements">
-				<paper-button raised id="d-button" onclick="document.querySelector('#dialog').toggle()">mete el dedo</paper-button>
+				<core-label horizontal layout>	
+					<paper-button raised id="d-button" onclick="document.querySelector('#dialog').toggle()">mete el dedo</paper-button>
 
-				<paper-dialog id="dialog" heading="Mensaje" transition="paper-dialog-transition-bottom">
-				<p>Este es un dialogo :)</p>
-				</paper-dialog>
+					<paper-dialog id="dialog" heading="Mensaje" transition="core-transition-bottom">
+					<p>Este es un dialogo :) CON TRANSITION BOTTOM Este es un dialogo :)Este es un dialogo :)Este es un dialogo :)Este es un dialogo :)Este es un dialogo :)Este es un dialogo :)Este es un dialogo :)Este es un dialogo :)</p>
+					</paper-dialog>
+				
+					<template is="auto-binding">
+					<section on-tap="{{toggleDialog}}"> 
+					    <paper-button raised>
+					      Dialogo con botones
+					    </paper-button>
+
+					    <paper-action-dialog heading="Hola" transition="core-transition-top">
+					      <p>Este es un dialogo CON TRANSITION TOP Este es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogoEste es un dialogo</p>
+					      <paper-button dismissive>Mas información...</paper-button>
+					      <paper-button affirmative>No gracias</paper-button>
+					      <paper-button affirmative autofocus>Acepto</paper-button>
+					    </paper-action-dialog>
+					  </section> 			  
+					</template>
+					<script>
+					  var scope = document.querySelector('template[is=auto-binding]');
+
+					  scope.toggleDialog = function(e) {
+					    if (e.target.localName != 'paper-button') {
+					      return;
+					    }
+					    var d = e.target.nextElementSibling;
+					    if (!d) {
+					      return;
+					    } 
+					    d.toggle();
+					  };
+					</script>
+				</core-label>
 			</div>
 			
 
