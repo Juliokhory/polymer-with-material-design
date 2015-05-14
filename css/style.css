@@ -9,7 +9,6 @@
 				box-sizing: border-box;
 				min-height: 100%;
 			}
-
 			core-toolbar {
 		    	background-color: #00bcd4;
 		      	color: #fff;
@@ -38,6 +37,22 @@
 		    	box-sizing: border-box;
 			    padding: 8px;
 		    }
+
+		    paper-fab.amarillo {
+		    	color: #000;
+        		background: #ffeb3b;
+    		}
+
+    		paper-fab.verde {
+      			background: #259b24;
+    		}
+    		paper-fab.azul {
+      			background: #5677fc;
+    		}
+    		paper-fab {
+      			color: #fff;
+      			margin-right:2em;
+    		}
 
 
 	
