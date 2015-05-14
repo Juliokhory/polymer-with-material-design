@@ -24,7 +24,7 @@
 				<li><a href="#paper-dropdown-menu">paper-dropdown-menu</a></li>
 				<li><a href="#paper-fab">paper-fab</a></li>
 				<li><a href="#paper-icon-button">paper-icon-button</a></li>
-				<li><a href="#paper-imput">paper-imput</a></li>
+				<li><a href="#paper-input">paper-input</a></li>
 				<li><a href="#paper-item">paper-item</a></li>
 				<li><a href="#paper-menu-button">paper-menu-button</a></li>
 				<li><a href="#paper-progress">paper-progress</a></li>
@@ -201,11 +201,37 @@
 		<a name="paper-input"></a>
 			<h1>paper-input</h1>
 			<div class="contens-elements">
+				<paper-input label="nombre del input"></paper-input><br>
+    			<paper-input label="el titulo flotara" floatingLabel></paper-input><br>
+			    <paper-input label=" entrada desabilitada" disabled></paper-input>
 			</div>
 
 		<a name="paper-item"></a>
 			<h1>paper-item</h1>
 			<div class="contens-elements">
+				<core-label horizontal layout>
+					<paper-shadow style="max-width: 10.5em;">
+				      	<paper-item>Item</paper-item>
+				      	<paper-item disabled>Desabilitado</paper-item>
+				      	<paper-item noink><a href="https://github.com/Juliokhory/polymer-with-material-design" layout horizontal center>mygithub</a></paper-item>
+				      	<paper-item>Iten largo se ajusta por defecto</paper-item>
+				    </paper-shadow>
+
+				    <paper-shadow style="max-width: 10.5em;">
+				      <paper-item>
+				        <core-icon icon="content-cut"></core-icon>
+				        Cortar
+				      </paper-item>
+				      <paper-item>
+				        <core-icon icon="content-copy"></core-icon>
+				        Copiar
+				      </paper-item>
+				      <paper-item>
+				        <core-icon icon="content-paste"></core-icon>
+				        Pegar
+				      </paper-item>
+				    </paper-shadow>
+				</core-label>
 			</div>
 
 		<a name="paper-menu-button"></a>

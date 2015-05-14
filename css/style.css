@@ -56,6 +56,9 @@
     		paper-icon-button.rojo {
        			color: #fe774d;
       		}
+      		paper-shadow{
+      			margin: 0px 10px;
+      		}
 
 
 	
