@@ -6,7 +6,6 @@
 		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<link rel="import" href="bower_components/core-elements/core-elements.html">
 		<link rel="import" href="bower_components/paper-elements/paper-elements.html">
-		<link rel="import" href="bower_components/paper-dialog/paper-action-dialog.html">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
@@ -15,7 +14,7 @@
 			<div>Paper Elements - Polymer</div>
 		</core-toolbar>
 
-		<div class="listado">
+		<div class="listado centrado">
 			<ol>
 				<li><a href="#paper-button">paper-button</a></li>
 				<li><a href="#paper-checkbox">paper-checkbox</a></li>
@@ -40,7 +39,6 @@
 		</div>
 
 		<a name="paper-button"></a>
-			
 			<h1>paper-button</h1>
 			<div class="contens-elements">
 				<paper-button>flat button</paper-button>
@@ -102,7 +100,6 @@
 				</core-label>
 			</div>
 			
-
 		<a name="paper-dropdown"></a> 
 			<h1>paper-dropdown</h1>
 			<div class="contens-elements">
@@ -242,51 +239,161 @@
 		<a name="paper-progress"></a>
 			<h1>paper-progress</h1>
 			<div class="contens-elements">
+				<paper-progress></paper-progress><div class="enlinea"><p>normal sin valores</p></div><br>
+				<paper-progress value="20"></paper-progress><div class="enlinea"><p>valores de carga en 20</p></div><br>
+				<paper-progress value="40"></paper-progress><div class="enlinea"><p>valores de carga en 40</p></div><br>
+				<paper-progress value="40" secondaryProgress="80"></paper-progress><div class="enlinea"><p>valores de carga en 40 segunda carga en 80</p></div><br>
+				<paper-progress value="100" max="100"></paper-progress><div class="enlinea"><p>carga total en 100</p></div><br>
+				<paper-progress indeterminate></paper-progress><div class="enlinea"><p>carga indeterminada</p></div><br>
+				<paper-progress class="blue" value="80"></paper-progress><div class="enlinea"><p>carga en 80 con color</p></div><br>
+				<paper-progress class="blue" value="40" secondaryProgress="80"></paper-progress><div class="enlinea"><p>valores de carga en 40 segunda carga en 80 con color</p></div><br>
 			</div>
 
 		<a name="paper-radio-button"></a>
 			<h1>paper-radio-button</h1>
 			<div class="contens-elements">
+			    <div class="label">Radio button</div>
+			    <paper-radio-button></paper-radio-button>
+			  
+			    <div class="label">Radio button (toggles) se puede desactivar </div>
+			    <paper-radio-button toggles></paper-radio-button>
+
+			    <div class="label">Radio button (disabled) no activo</div>
+			    <paper-radio-button disabled toggles></paper-radio-button>
+
+			    <div class="label">Radio button (checked, disabled) no activo, marcado</div>
+			    <paper-radio-button checked disabled toggles></paper-radio-button>
+			    <div class="label">Radio button (toggles, Blue) con color</div>
+			    <paper-radio-button class="blue" toggles></paper-radio-button>
 			</div>
 
 		<a name="paper-radio-group"></a>
 			<h1>paper-radio-group</h1>
 			<div class="contens-elements">
+				<paper-radio-group selected="always">
+      			<paper-radio-button name="Opcion 1" label="Opcion 1"></paper-radio-button>
+      			<paper-radio-button name="Opcion 2" label="Opcion 2"></paper-radio-button>
+      			<paper-radio-button name="Opcion 3" label="Opcion 3"></paper-radio-button>
+    			</paper-radio-group>
 			</div>
 
 		<a name="paper-ripple"></a>
 			<h1>paper-ripple</h1>
 			<div class="contens-elements">
+				<div class="cardripple">
+    				<paper-ripple class="recenteringTouch" fit></paper-ripple>
+    		    </div>
+			    <div class="cardripple image">
+    		        <paper-ripple class="recenteringTouch" fit></paper-ripple>
+			    </div>
 			</div>
 
 		<a name="paper-shadow"></a>
 			<h1>paper-shadow</h1>
 			<div class="contens-elements">
+				
+					    <div>Sombras</div>
+					    
+					    <paper-shadow class="card" z="0">
+					      z = 0
+					    </paper-shadow>
+
+					    <paper-shadow class="card" z="1">
+					      z = 1
+					    </paper-shadow>
+
+					    <paper-shadow class="card" z="2">
+					      z = 2
+					    </paper-shadow>
+
+					    <paper-shadow class="card" z="3">
+					      z = 3
+					    </paper-shadow>
+
+					    <paper-shadow class="card" z="4">
+					      z = 4
+					    </paper-shadow>
+
+					    <paper-shadow class="card" z="5">
+					      z = 5
+					    </paper-shadow>
+
+
 			</div>
 
 		<a name="paper-slider"></a>
 			<h1>paper-slider</h1>
 			<div class="contens-elements">
+			<paper-slider value="50"></paper-slider>
+			<paper-slider value="23" max="255" editable></paper-slider>
+			<paper-slider pin value="50"></paper-slider>
 			</div>
 
 		<a name="paper-spinner"></a>
 			<h1>paper-spinner</h1>
 			<div class="contens-elements">
+			<paper-spinner active></paper-spinner>
 			</div>
 
 		<a name="paper-tabs"></a>
 			<h1>paper-tabs</h1>
 			<div class="contens-elements">
+			<paper-tabs selected="0">
+		    	<paper-tab>PRIMER TAB</paper-tab>
+		    	<paper-tab>SEGUNDO TAB</paper-tab>
+		    	<paper-tab>TERCER TAB</paper-tab>
+			</paper-tabs><br>
+
+			<paper-tabs id="scrollableTabs" selected="0" scrollable>
+			    <paper-tab>TAB 01</paper-tab>
+			    <paper-tab>TAB 02</paper-tab>
+			    <paper-tab>TAB 03</paper-tab>
+			    <paper-tab>TAB 04</paper-tab>
+			    <paper-tab>TAB 05</paper-tab>
+			    <paper-tab>TAB 06</paper-tab>
+			    <paper-tab>TAB 07</paper-tab>
+			    <paper-tab>TAB 08</paper-tab>
+			    <paper-tab>TAB 09</paper-tab>
+			    <paper-tab>TAB 10</paper-tab>
+			    <paper-tab>TAB 11</paper-tab>
+			    <paper-tab>TAB 12</paper-tab>
+			</paper-tabs>
 			</div>
 
 		<a name="paper-toast"></a>
 			<h1>paper-toast</h1>
 			<div class="contens-elements">
+				
+				<paper-button raised onclick="document.querySelector('#toast1').show()">Toast de confirmación</paper-button>
+  				<paper-button raised onclick="document.querySelector('#toast2').show()">Recibiendo un mensaje</paper-button>
+  				<paper-button raised onclick="document.querySelector('#toast3').show()">Enviando un mensaje</paper-button>
+				
+				<paper-toast id="toast1" text="Confirmado."></paper-toast>
+  				
+  				<paper-toast id="toast2" role="alert" text="Mensaje de aviso">
+  				<div style="color: #eeff41;" onclick="console.log('RETRY')">Accion</div>
+  				</paper-toast>
+  
+				<paper-toast id="toast3" class="capsule" text="Mensaje enviado" style="padding-right: 60px;"></paper-toast>
 			</div>
 
 		<a name="paper-toggle-button"></a>
 			<h1>paper-toggle-button</h1>
 			<div class="contens-elements">
+			   	<div flex>Color por defecto</div>
+			  		<paper-toggle-button checked></paper-toggle-button>
+			    <br>
+			    <br>
+				<div flex>cambio de color al activarlo</div>
+				    <paper-toggle-button class="colorazul"></paper-toggle-button>    
+			    <br>
+			    <br>
+		    	<div flex>Color personalizado</div>
+				<paper-toggle-button class="personalizado"></paper-toggle-button>
+			    <br>
+			    <br>
+			    <div flex>Desabilitado</div>
+				<paper-toggle-button disabled></paper-toggle-button>
 			</div>
 		
 	</body>

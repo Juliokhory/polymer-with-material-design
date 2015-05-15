@@ -8,12 +8,15 @@
 				background-color: #fff;
 				box-sizing: border-box;
 				min-height: 100%;
+				margin:0px auto 0px;
 			}
-			core-toolbar {
-		    	background-color: #00bcd4;
-		      	color: #fff;
-		      	font-size: 24px;
-		      	box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+			
+
+		    .centrado {
+		    	margin:0px auto 0px;
+		    }
+		    .listado.centrado{
+		    	width: 300px;
 		    }
 
 		    .contens-elements{
@@ -30,9 +33,11 @@
 		    paper-checkbox{
 		    	padding: 0px 10px;
 			}	
+
 			x-trigger {
 		    	z-index: auto;
 		    }
+
 		    html /deep/ paper-dropdown:not(.no-padding)::shadow #scroller {
 		    	box-sizing: border-box;
 			    padding: 8px;
@@ -59,6 +64,87 @@
       		paper-shadow{
       			margin: 0px 10px;
       		}
+      		.enlinea{
+      			display: inline-block;
+      			padding-left:10px;
+      		}
+      		.enline p{
+      			padding-bottom: 2px;
+      		}
+      		paper-progress.blue::shadow #activeProgress {
+				background-color: #5677fc;
+		    }
+		    
+		    paper-progress.blue::shadow #secondaryProgress {
+		    	background-color: #B3E5FC;
+		    }
+		    
+		    paper-radio-button.blue::shadow #ink[checked] {
+		    	color: #4285f4;
+		    }
+		    
+		    paper-radio-button.blue::shadow #onRadio {
+		    	background-color: #4285f4;
+		    }
+
+		    paper-radio-button[checked].blue::shadow #offRadio {
+		    	border-color: #4285f4;
+		    }
+
+		    .cardripple {
+		      	position: relative;
+		      	display: inline-block;
+		      	width: 200px;
+		      	height: 240px;
+		      	vertical-align: top;
+		      	background-color: #fff;
+		      	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+		    }
+    		.cardripple.image {
+      			background: url(http://lorempixel.com/200/240/nature/);
+     			color: #fff;
+    		}
+
+    		.card {
+		    	display: inline-block;
+		      	background: white;
+		      	box-sizing: border-box;
+		      	width: 100px;
+		      	height: 100px;
+		      	margin: 10px;
+		      	padding: 10px;
+		      	border-radius: 2px;
+		    }
+
+		    paper-tabs, core-toolbar {
+		     	background-color: #607D8B;
+		      	color: #fff;
+		      	box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+		    }
+
+
+		    paper-toggle-button.colorazul::shadow [checked] .toggle-ink {
+		    	color: #4285f4;
+		    }
+
+		    paper-toggle-button.colorazul::shadow [checked] .toggle {
+		    	background-color: #4285f4;
+		    }
+
+		    paper-toggle-button.personalizado::shadow .toggle-ink {
+		    	color: #F57C00;
+		    }
+
+		    paper-toggle-button.personalizado::shadow .toggle-bar {
+		    	background-color: #F57C00;
+		    }
+
+		    paper-toggle-button.personalizado::shadow .toggle-button {
+		    	background-color: #F57C00;
+		    }
+
+
+      		
 
 
 	
